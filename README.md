@@ -10,6 +10,11 @@ An Apollo Guidance Computer DSKY lookalike that works as a Home Assistant contro
 
 The mechanical design is based on [MKme/AGC_DSKY_Replica](https://github.com/MKme/AGC_DSKY_Replica) (GPL-3.0). The main case and rear cover are dropped, the mid frame is split for support-free printing, and the electronics are new.
 
+The STEP model of the original replica, with its lenses and original electronics, isn't in this repo. It's offered upstream instead, as `3D Models/DSKY_Original_Build.step`:
+
+- the pull request: [MKme/AGC_DSKY_Replica#2](https://github.com/MKme/AGC_DSKY_Replica/pull/2), "Create a step file with the complete assembly";
+- the fork it comes from: [bsakel/AGC_DSKY_Replica](https://github.com/bsakel/AGC_DSKY_Replica), [`3D Models/DSKY_Original_Build.step`](https://github.com/bsakel/AGC_DSKY_Replica/blob/master/3D%20Models/DSKY_Original_Build.step).
+
 ## Repository layout
 
 ```
@@ -17,7 +22,7 @@ hardware/
   BOM.md                    full bill of materials (printed parts, fasteners, electronics)
   cad/
     DSKY_HA_Terminal.step   this build: both options in one file as selectable components
-    DSKY_Original_Build.step  the original replica with lenses and its original electronics
+                            (the original replica's STEP lives upstream, see above)
   pcb/                      Option A: KiCad projects, panel, JLCPCB BOM/CPL (see pcb/README.md)
   diy/                      Option B: hand-wired schematic (KiCad) + wiring diagram
 firmware/                   RP2040-Zero firmware (keys + status lights)  - to do
@@ -79,7 +84,7 @@ Work through these in order; each group builds on the one before.
    - Rename the "(HyperPixel)" parts here and in `hardware/BOM.md`.
 2. **Keyboard PCB model:** update it to the KiCad board. It still has the old MX-style holes and lacks the RP2040 tab.
 3. **Spacers:** the keyboard spacers are Ø6.5 mm. The PCB courtyards now allow for that (r 3.5 on the back), so keep them that size or smaller.
-4. **`DSKY_Original_Build.step`** is referenced in the layout above but isn't in the repo. Add it or drop the reference.
+4. **Upstream PR.** Follow up on [MKme/AGC_DSKY_Replica#2](https://github.com/MKme/AGC_DSKY_Replica/pull/2), the original-build STEP file. Once it's merged, point the links above at MKme's repo instead of the fork.
 5. Export the STLs (see `hardware/BOM.md`).
 
 ### 3. Firmware (RP2040-Zero)

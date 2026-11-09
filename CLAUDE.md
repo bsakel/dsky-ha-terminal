@@ -56,7 +56,7 @@ All 10 LEDs at full white draw about 600 mA from the Pi's USB port. **Firmware m
 
 - `hardware/cad/`: the STEP models.
   - `DSKY_HA_Terminal.step` holds both build options as components.
-  - `DSKY_Original_Build.step` is the original replica.
+  - The original replica's STEP (`DSKY_Original_Build.step`) isn't in this repo on purpose. It's in Vasilis's fork [bsakel/AGC_DSKY_Replica](https://github.com/bsakel/AGC_DSKY_Replica) under `3D Models/`, offered upstream in [MKme/AGC_DSKY_Replica#2](https://github.com/MKme/AGC_DSKY_Replica/pull/2).
 - `hardware/pcb/`: KiCad 8 projects (keyboard board, status board, panel), shared `lib/`, JLCPCB BOM/CPL files and `scripts/`.
   - The scripts are the Python generators that produced the boards. Regenerating overwrites hand edits.
 - `hardware/diy/`: the hand-wired schematic (KiCad) and a wiring diagram.
