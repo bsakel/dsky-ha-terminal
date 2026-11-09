@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "dsky")(type "KiCad")(uri "${KIPRJMOD}/../pcb/lib/dsky.kicad_sym")(options "")(descr ""))
+)
